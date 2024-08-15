@@ -96,10 +96,12 @@ a {
     color: var(--primary-color);
     text-align: right;
     margin-top: 5px;
+    cursor: default;
 }
 
-.login-forgot-password:hover {
+.login-forgot-password span:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .login-submit-button {

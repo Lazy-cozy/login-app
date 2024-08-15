@@ -39,6 +39,7 @@
           if (!hasError) {
             if (username !== "khalid" || password !== "123") {
               formError.textContent = "Invalid credentials";
+              formError.classList.remove("login-success-message");
               hasError = true;
             } else {
               formError.textContent = `Login successful. Welcome, ${username}`;
@@ -84,7 +85,9 @@
                     class="login-form-input"
                     placeholder="password"
                   />
-                  <a href="#" class="login-forgot-password">Forgot password?</a>
+                  <a href="#" class="login-forgot-password"
+                    ><span>Forgot password?</span></a
+                  >
                 </div>
                 <div class="login-form-group">
                   <button type="submit" class="login-submit-button">
