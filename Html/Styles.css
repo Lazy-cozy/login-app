@@ -34,7 +34,7 @@ a {
     background-color: var(--background-color);
 }
 
-.content-container {
+.login-container {
     display: grid;
     grid-template-columns: 0.6fr 1fr;
     height: 80vh;
@@ -45,10 +45,70 @@ a {
     width: 90%;
 }
 
-.content-section-left {
+.login-section-left {
     background-color: var(--accent-color);
 }
 
-.content-section-right {
+.login-section-right {
     background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-title {
+    text-align: center;
+    color: var(--heading-color);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--heading-color);
+}
+
+.login-form-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-forgot-password {
+    font-size: 12px;
+    color: var(--primary-color);
+    text-align: right;
+    margin-top: 5px;
+}
+
+.login-forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-submit-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 65%;
+    align-self: center;
 }
