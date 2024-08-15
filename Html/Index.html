@@ -41,7 +41,7 @@
               formError.textContent = "Invalid credentials";
               hasError = true;
             } else {
-              formError.textContent = "Login successful";
+              formError.textContent = `Login successful. Welcome, ${username}`;
               hasError = true;
               formError.classList.add("login-success-message");
             }
