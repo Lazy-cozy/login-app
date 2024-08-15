@@ -8,6 +8,7 @@
     --accent-color: #19E8B3;
     --border-color: #BEBEBE;
     --background-color: #fff;
+    --error-color: #ff0000;
 }
 
 body {
@@ -109,6 +110,18 @@ a {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 65%;
-    align-self: center;
+}
+
+.login-error-message {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 1.25rem;
+}
+
+.login-success-message {
+    color: var(--accent-color);
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 1.25rem;
 }

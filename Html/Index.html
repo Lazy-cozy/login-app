@@ -1,12 +1,54 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="copyright" content="My-App" />
+    <meta name="copyright" content="LOGIN-APP" />
     <meta name="language" content="en" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="My-App" />
+    <meta name="description" content="LOGIN-APP" />
     <title>LOGIN-APP</title>
     <link rel="stylesheet" href="Styles.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("login-form");
+        const usernameInput = document.getElementById("login-username");
+        const passwordInput = document.getElementById("login-password");
+        const usernameError = document.getElementById("username-error");
+        const passwordError = document.getElementById("password-error");
+        const formError = document.getElementById("form-error");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          formError.textContent = "";
+
+          const username = usernameInput.value.trim();
+          const password = passwordInput.value.trim();
+
+          let hasError = false;
+
+          if (password === "") {
+            formError.textContent = "Password is required";
+            hasError = true;
+          }
+
+          if (username === "") {
+            formError.textContent = "Username is required";
+            hasError = true;
+          }
+
+          if (!hasError) {
+            if (username !== "khalid" || password !== "123") {
+              formError.textContent = "Invalid credentials";
+              hasError = true;
+            } else {
+              formError.textContent = "Login successful";
+              hasError = true;
+              formError.classList.add("login-success-message");
+            }
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="root">
@@ -20,7 +62,7 @@
           <div class="login-section-right">
             <div class="login-box">
               <h2 class="login-title">Log in</h2>
-              <form class="login-form">
+              <form class="login-form" id="login-form">
                 <div class="login-form-group">
                   <label for="login-username" class="login-form-label"
                     >Username</label
@@ -44,7 +86,12 @@
                   />
                   <a href="#" class="login-forgot-password">Forgot password?</a>
                 </div>
-                <button type="submit" class="login-submit-button">Login</button>
+                <div class="login-form-group">
+                  <button type="submit" class="login-submit-button">
+                    Login
+                  </button>
+                  <div id="form-error" class="login-error-message"></div>
+                </div>
               </form>
             </div>
           </div>
