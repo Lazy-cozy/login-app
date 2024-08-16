@@ -12,7 +12,7 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ["./routes/auth/loginController*.js"], // Path to the API routes in your Node.js application
+  apis: ["./routes/auth/loginRouters.js"], // Path to the API routes in your Node.js application
 };
 
 const swaggerSpec = swaggerJsdoc(options);

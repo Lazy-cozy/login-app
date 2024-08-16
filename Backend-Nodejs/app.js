@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import { swaggerServe, swaggerSetup } from "./middleware/swagger.js";
-import loginRouters from "./routes/auth/loginController.js";
+import loginRouters from "./routes/auth/loginRouters.js";
 
 dotenv.config();
 const app = express();
