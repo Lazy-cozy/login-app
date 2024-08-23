@@ -8,12 +8,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
-// Setup Swagger UI
-app.use("/swagger", swaggerServe, swaggerSetup);
-
-app.use("/api", loginRouters);
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/swagger", swaggerServe, swaggerSetup);
+app.use("/api", loginRouters);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
