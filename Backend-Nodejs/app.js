@@ -3,9 +3,11 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { swaggerServe, swaggerSetup } from "./middleware/swagger.js";
 import loginRouters from "./routes/auth/loginRouters.js";
+import connectDB from "./configs/db.js";
 
 dotenv.config();
 const app = express();
+connectDB();
 const port = process.env.PORT || 8000;
 
 app.use(cors());
