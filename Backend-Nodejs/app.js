@@ -18,3 +18,10 @@ app.use("/swagger", swaggerServe, swaggerSetup);
 app.use("/api", loginRouters);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+
+// ToDo
+// loginschema better name
+//common validation
+//text Error message
+//
